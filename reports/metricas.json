@@ -1,0 +1,225 @@
+{
+  "modelo_escolhido": "Regressão Logística",
+  "criterio_de_escolha": "maior recall na validação; empate decidido pelo recall da validação cruzada no treino e depois pelo F1",
+  "semente": 42,
+  "dados_originais": {
+    "linhas": 569,
+    "colunas": 31,
+    "valores_ausentes": 0,
+    "linhas_duplicadas": 0,
+    "malignos": 212,
+    "benignos": 357
+  },
+  "dados_limpos": {
+    "linhas": 569,
+    "colunas": 31,
+    "valores_ausentes": 0,
+    "linhas_duplicadas": 0,
+    "malignos": 212,
+    "benignos": 357
+  },
+  "tamanho_dos_conjuntos": {
+    "treino": 397,
+    "validacao": 86,
+    "teste": 86
+  },
+  "validacao": {
+    "Regressão Logística": {
+      "accuracy": 0.9651,
+      "precision": 0.9394,
+      "recall": 0.9688,
+      "f1": 0.9538,
+      "matriz_confusao": [
+        [
+          52,
+          2
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "recall_cv_treino": 0.9531
+    },
+    "KNN": {
+      "accuracy": 0.9767,
+      "precision": 0.9688,
+      "recall": 0.9688,
+      "f1": 0.9688,
+      "matriz_confusao": [
+        [
+          53,
+          1
+        ],
+        [
+          1,
+          31
+        ]
+      ],
+      "recall_cv_treino": 0.8855
+    },
+    "Random Forest": {
+      "accuracy": 0.9651,
+      "precision": 0.9677,
+      "recall": 0.9375,
+      "f1": 0.9524,
+      "matriz_confusao": [
+        [
+          53,
+          1
+        ],
+        [
+          2,
+          30
+        ]
+      ],
+      "recall_cv_treino": 0.9391
+    }
+  },
+  "teste": {
+    "accuracy": 0.9884,
+    "precision": 1.0,
+    "recall": 0.9688,
+    "f1": 0.9841,
+    "matriz_confusao": [
+      [
+        54,
+        0
+      ],
+      [
+        1,
+        31
+      ]
+    ]
+  },
+  "interpretacao": {
+    "importancia_permutacao": {
+      "texture_worst": 0.0448,
+      "radius_se": 0.036,
+      "concave_points_mean": 0.0219,
+      "radius_worst": 0.021,
+      "concave_points_worst": 0.0179,
+      "perimeter_worst": 0.0156,
+      "area_worst": 0.0137,
+      "symmetry_worst": 0.0131,
+      "fractal_dimension_worst": 0.0092,
+      "texture_se": 0.0069
+    },
+    "shap_media_absoluta": {
+      "texture_worst": 0.0522,
+      "radius_se": 0.0469,
+      "radius_worst": 0.0431,
+      "concave_points_mean": 0.0419,
+      "concave_points_worst": 0.0392,
+      "area_worst": 0.0358,
+      "perimeter_worst": 0.0354,
+      "symmetry_worst": 0.0306,
+      "compactness_se": 0.0306,
+      "perimeter_se": 0.0275
+    }
+  },
+  "exploracao": {
+    "estatisticas_principais": {
+      "radius_mean": {
+        "mean": 14.1273,
+        "std": 3.524,
+        "min": 6.981,
+        "max": 28.11
+      },
+      "texture_mean": {
+        "mean": 19.2896,
+        "std": 4.301,
+        "min": 9.71,
+        "max": 39.28
+      },
+      "perimeter_mean": {
+        "mean": 91.969,
+        "std": 24.299,
+        "min": 43.79,
+        "max": 188.5
+      },
+      "area_mean": {
+        "mean": 654.8891,
+        "std": 351.9141,
+        "min": 143.5,
+        "max": 2501.0
+      },
+      "concavity_mean": {
+        "mean": 0.0888,
+        "std": 0.0797,
+        "min": 0.0,
+        "max": 0.4268
+      },
+      "concave_points_mean": {
+        "mean": 0.0489,
+        "std": 0.0388,
+        "min": 0.0,
+        "max": 0.2012
+      }
+    },
+    "media_por_classe": {
+      "radius_mean": {
+        "Benigno": 12.147,
+        "Maligno": 17.463,
+        "razao_maligno_benigno": 1.438
+      },
+      "texture_mean": {
+        "Benigno": 17.915,
+        "Maligno": 21.605,
+        "razao_maligno_benigno": 1.206
+      },
+      "perimeter_mean": {
+        "Benigno": 78.075,
+        "Maligno": 115.365,
+        "razao_maligno_benigno": 1.478
+      },
+      "area_mean": {
+        "Benigno": 462.79,
+        "Maligno": 978.376,
+        "razao_maligno_benigno": 2.114
+      },
+      "concavity_mean": {
+        "Benigno": 0.046,
+        "Maligno": 0.161,
+        "razao_maligno_benigno": 3.491
+      },
+      "concave_points_mean": {
+        "Benigno": 0.026,
+        "Maligno": 0.088,
+        "razao_maligno_benigno": 3.421
+      }
+    },
+    "correlacao_com_alvo": {
+      "concave_points_worst": 0.7936,
+      "perimeter_worst": 0.7829,
+      "concave_points_mean": 0.7766,
+      "radius_worst": 0.7765,
+      "perimeter_mean": 0.7426,
+      "area_worst": 0.7338,
+      "radius_mean": 0.73,
+      "area_mean": 0.709,
+      "concavity_mean": 0.6964,
+      "concavity_worst": 0.6596,
+      "compactness_mean": 0.5965,
+      "compactness_worst": 0.591,
+      "radius_se": 0.5671,
+      "perimeter_se": 0.5561,
+      "area_se": 0.5482,
+      "texture_worst": 0.4569,
+      "smoothness_worst": 0.4215,
+      "symmetry_worst": 0.4163,
+      "texture_mean": 0.4152,
+      "concave_points_se": 0.408,
+      "smoothness_mean": 0.3586,
+      "symmetry_mean": 0.3305,
+      "fractal_dimension_worst": 0.3239,
+      "compactness_se": 0.293,
+      "concavity_se": 0.2537,
+      "fractal_dimension_se": 0.078,
+      "symmetry_se": -0.0065,
+      "texture_se": -0.0083,
+      "fractal_dimension_mean": -0.0128,
+      "smoothness_se": -0.067
+    }
+  }
+}
